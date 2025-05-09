@@ -1,0 +1,176 @@
+:root{
+    --cf_body: #0a1f44;
+    --text_claro: #ffffff;
+    --text_medio: #53627c;
+    --text_oscuro: #1e2432;
+    --bo_rojo: #ff1e42;
+    --bo_rojoFuerte: #c3112d;
+    --naranja: #ff8c00;
+    --footer: #7fffd4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Courier, sans-serif;
+}
+
+body{
+    background-color: var(--cf_body);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 76.4vh;
+    justify-content: flex-start;
+}
+
+header{
+    text-align: center;
+    margin: 50px;
+    color: var(--text_claro);
+    font-size: 1.5em;
+}
+
+#buscar{
+    text-align: center;
+}
+
+#buscar input{
+    border-top: 0;       
+    border-left: 0;      
+    border-right: 0;     
+    border-bottom: 1px solid black; 
+    border-color: var(--text_claro);
+    width: 400px;
+    height: 40px;
+    background-color: var(--cf_body);
+    color: var(--text_claro);
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+#buscar button{
+    background-color: var(--bo_rojo);
+    cursor: pointer;
+    border: none;
+    width: 110px;
+    height: 48px;
+    border-radius: 5px;
+    color: var(--text_claro);
+    font-size: 1.25em;
+    font-weight: bolder;
+}
+
+#buscar button:hover{
+    background-color: var(--bo_rojoFuerte);
+}
+
+#resultado{
+    display: flex;
+    justify-content: center;
+}
+
+#tarjetas{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 1260px;
+    gap: 50px;
+}
+
+.prueba{
+    height: 325px;
+    width: 277px;
+    background-color: var(--text_claro);
+    border-radius: 20px;
+    padding: 32px;
+}
+
+.prueba .nombre{
+    font-size: 1.5em;
+    color: var(--text_medio);
+}
+
+.prueba .nombre sup{
+    font-size: 1rem;
+    padding: 0.2em 0.4em;
+    border-radius: 30px;
+    background-color: var(--naranja);
+    color: var(--text_claro);
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.prueba .temperatura{
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+.prueba .temperatura sup{
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+figcaption{
+    text-transform: uppercase;
+    font-style: 1.2em;
+    color: var(--text_medio);
+    font-size: 1.20em;
+}
+
+#resultado{
+    padding-top: 100px;
+}
+
+footer{
+    width: 100%;
+    background-color: #7fffd4;
+    color: black;
+    height: 60px;
+    margin-top: 20px;
+}
+
+footer p{
+    margin: 22px;
+    font-weight: bold;
+    font-size: large;
+    text-align: end;
+}
+
+@media (max-width: 1000px){
+    #tarjetas{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 700px){
+    #tarjetas{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button{
+        margin: 10px;
+    }
+}
+
+@media (max-width: 500px){
+    #tarjetas{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+}
