@@ -43,7 +43,6 @@ header{
     border-top: 0;       
     border-left: 0;      
     border-right: 0;     
-    border-bottom: 1px solid black; 
     border-color: var(--text_claro);
     width: 400px;
     height: 40px;
@@ -67,6 +66,22 @@ header{
 
 #buscar button:hover{
     background-color: var(--bo_rojoFuerte);
+}
+
+.error {
+    visibility: hidden;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.error.activo {
+    visibility: visible;
+    color: var(--bo_rojo);
+}
+
+.error.advertencia {
+    visibility: visible;
+    color: var(--naranja);
 }
 
 #resultado{
